@@ -10,25 +10,10 @@
     <name>GCM Java Server Client Library</name>
     <description>Manage GCM on server</description>
     <url>http://github.com/google/gcm</url>
-    <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <name>GCM Java</name>
-            <email>java-gcm@google.com</email>
-            <organization>Google</organization>
-            <organizationUrl>https://google.com</organizationUrl>
-        </developer>
-    </developers>
-    <scm>
-        <connection>scm:git:git@github.com:google/gcm.git</connection>
-        <developerConnection>scm:git:git@github.com:google/gcm.git</developerConnection>
-        <url>git@github.com:google/gcm.git</url>
-    </scm>
+	<properties>
+	    <maven.compiler.source>1.6</maven.compiler.source>
+	    <maven.compiler.target>1.6</maven.compiler.target>
+	</properties>
     <dependencies>
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
@@ -36,4 +21,13 @@
             <version>1.1.1</version>
         </dependency>
     </dependencies>
+    	<build>
+    	<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
